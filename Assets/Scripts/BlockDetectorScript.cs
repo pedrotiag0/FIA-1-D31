@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BlockDetectorScript : MonoBehaviour
 {
-	//
+
     public float angleOfSensors = 10f;
     public float rangeOfSensors = 10f;
     protected Vector3 initialTransformUp;
@@ -31,10 +31,10 @@ public class BlockDetectorScript : MonoBehaviour
         if (blockObject != null)
         {
             angleToClosestObj = blockObject.angle;
-            strength = 1.0f / (blockObject.distance + 1.0f); // forca negativa no unity
+            strength = 1.0f / (blockObject.distance + 1.0f); // Negative strength will be applied in Unity | Meta 1
         }
         else
-        { // no object detected
+        { // no wall detected
             strength = 0;
             angleToClosestObj = 0;
         }
@@ -42,7 +42,7 @@ public class BlockDetectorScript : MonoBehaviour
 
     public ObjectInfo GetClosestWall()
     {
-        ObjectInfo[] a = (ObjectInfo[])GetVisibleObjects("Wall").ToArray();
+        ObjectInfo[] a = (ObjectInfo[])GetVisibleObjects("Wall").ToArray(); // Search objects of type "Wall" | Meta 1
         if (a.Length == 0)
         {
             return null;
@@ -50,7 +50,7 @@ public class BlockDetectorScript : MonoBehaviour
         return a[a.Length - 1];
     }
 
-    public List<ObjectInfo> GetVisibleObjects(string objectTag)
+    public List<ObjectInfo> GetVisibleObjects(string objectTag) // Similiar function of "GetVisibleObjects" from ResourceDetectorScript.cs | Meta 1
     {
         RaycastHit hit;
         List<ObjectInfo> objectsInformation = new List<ObjectInfo>();
