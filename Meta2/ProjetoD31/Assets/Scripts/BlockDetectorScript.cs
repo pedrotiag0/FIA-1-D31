@@ -93,13 +93,19 @@ public class BlockDetectorScript : MonoBehaviour
 
     public float GetLinearOuput()
     {
+        if (strength == 0) // Se o strength já for zero, então deve devolver
+        {
+            return strength;
+        }
         if (strength > limiarMaxBlock) // X max
         {
-            strength = limiarMaxBlock;
+            strength = 0;
+            return strength;
         }
         else if (strength < limiarMinBlock) // X min
         {
-            strength = limiarMinBlock;
+            strength = 0;
+            return strength;
         }
 
         if (strength > limiarSupBlock) // Y max
@@ -118,16 +124,27 @@ public class BlockDetectorScript : MonoBehaviour
     {
         // YOUR CODE HERE
         //return strength;
+        if (strength == 0) // Se o strength já for zero, então deve devolver
+        {
+            return strength;
+        }
         if (strength > limiarMaxBlock) // X max
         {
-            strength = limiarMaxBlock;
+            strength = 0;
+            return strength;
         }
         else if (strength < limiarMinBlock) // X min
         {
-            strength = limiarMinBlock;
+            strength = 0;
+            return strength;
         }
 
-        float aux = (float)((1.0 / (sigma * Math.Sqrt(2.0 * Math.PI))) * Math.Exp(-0.5 * Math.Pow((strength - miu) / sigma, 2.0)));
+        // a = 1 (garante que a area inferior da curva é 1) | miu = b | sigma = c
+        float aux1 = (strength - miu) / (float)(2.0 * sigma * sigma);
+        float aux2 = -aux1 * aux1 / (float)2.0;
+        float aux = (float)1.0 * (float)Math.Exp(aux2);
+        
+        //float aux = (float)((1.0 / (sigma * Math.Sqrt(2.0 * Math.PI))) * Math.Exp(-0.5 * Math.Pow((strength - miu) / sigma, 2.0)));
 
         if (aux > limiarSupBlock) // Y max
         {
@@ -138,21 +155,28 @@ public class BlockDetectorScript : MonoBehaviour
             aux = limiarInfBlock;
         }
         return aux;
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
     }
 
     public virtual float GetLogaritmicOutput() // META 2
     {
         // YOUR CODE HERE
         //return strength;
+        if (strength == 0) // Se o strength já for zero, então deve devolver
+        {
+            return strength;
+        }
         if (strength > limiarMaxBlock) // X max
         {
-            strength = limiarMaxBlock;
+            strength = 0;
+            return strength;
         }
         else if (strength < limiarMinBlock) // X min
         {
-            strength = limiarMinBlock;
+            strength = 0;
+            return strength;
         }
+
 
         float aux = -(float)(Math.Log(strength));
 

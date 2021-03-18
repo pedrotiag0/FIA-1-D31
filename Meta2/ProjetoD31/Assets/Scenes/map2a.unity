@@ -692,11 +692,39 @@ PrefabInstance:
       objectReference: {fileID: 740066924}
     - target: {fileID: 1022615238940490695, guid: b606527f8af28664a894844f3f526637, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1022615238940490695, guid: b606527f8af28664a894844f3f526637, type: 3}
       propertyPath: activationFunction
       value: '"logaritmica"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665692148467673741, guid: b606527f8af28664a894844f3f526637, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665692148467673741, guid: b606527f8af28664a894844f3f526637, type: 3}
+      propertyPath: countText
+      value: 
+      objectReference: {fileID: 740066924}
+    - target: {fileID: 3665692148467673741, guid: b606527f8af28664a894844f3f526637, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3665692148467673741, guid: b606527f8af28664a894844f3f526637, type: 3}
+      propertyPath: weightResource
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860741153122842741, guid: b606527f8af28664a894844f3f526637, type: 3}
+      propertyPath: miu
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860741153122842741, guid: b606527f8af28664a894844f3f526637, type: 3}
+      propertyPath: sigma
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860741153122842741, guid: b606527f8af28664a894844f3f526637, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4098859518129120615, guid: b606527f8af28664a894844f3f526637, type: 3}
       propertyPath: m_RootOrder
@@ -741,6 +769,42 @@ PrefabInstance:
     - target: {fileID: 4098859518129120615, guid: b606527f8af28664a894844f3f526637, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314612682239532039, guid: b606527f8af28664a894844f3f526637, type: 3}
+      propertyPath: miu
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314612682239532039, guid: b606527f8af28664a894844f3f526637, type: 3}
+      propertyPath: sigma
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314612682239532039, guid: b606527f8af28664a894844f3f526637, type: 3}
+      propertyPath: limiarInfResource
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314612682239532039, guid: b606527f8af28664a894844f3f526637, type: 3}
+      propertyPath: limiarMaxResource
+      value: 999
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314612682239532039, guid: b606527f8af28664a894844f3f526637, type: 3}
+      propertyPath: limiarMinResource
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314612682239532039, guid: b606527f8af28664a894844f3f526637, type: 3}
+      propertyPath: limiarSupResource
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7451109434720238337, guid: b606527f8af28664a894844f3f526637, type: 3}
+      propertyPath: speed
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7451109434720238337, guid: b606527f8af28664a894844f3f526637, type: 3}
+      propertyPath: countText
+      value: 
+      objectReference: {fileID: 740066924}
+    - target: {fileID: 7451109434720238337, guid: b606527f8af28664a894844f3f526637, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8831919988329666845, guid: b606527f8af28664a894844f3f526637, type: 3}
       propertyPath: m_Name
